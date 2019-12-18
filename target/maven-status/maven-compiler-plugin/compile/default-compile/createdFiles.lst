@@ -1,0 +1,13 @@
+mx\com\gm\sga\domain\Sesion.class
+mx\com\gm\sga\domain\Administrador.class
+mx\com\gm\sga\datos\OferenteDaoImpl.class
+mx\com\gm\sga\servicio\OferenteService.class
+mx\com\gm\sga\domain\Prestamo.class
+mx\com\gm\sga\datos\OferenteDao.class
+mx\com\gm\sga\domain\Usuario.class
+mx\com\gm\sga\domain\Oferente.class
+mx\com\gm\sga\domain\Oferta.class
+mx\com\gm\sga\domain\Notificacion.class
+mx\com\gm\sga\servicio\OferenteServiceImpl.class
+mx\com\gm\sga\domain\Demandante.class
+mx\com\gm\sga\servicio\OferenteServiceRS.class
