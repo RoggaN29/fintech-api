@@ -22,21 +22,21 @@ public class DemandanteServiceRS {
     private DemandanteService DemandanteService;
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<Demandante> listarDemandantes() {
         return DemandanteService.listarDemandantes();
     }
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Path("{rfc}")
     public Demandante encontrarDemandantePorRfc(@PathParam("rfc") String rfc) {
         return DemandanteService.encontrarDemandantePorRfc(new Demandante(rfc));
     }
 
     @POST
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Response agregarDemandante(Demandante demandante) {
         try {
             DemandanteService.registrarDemandante(demandante);
@@ -48,8 +48,8 @@ public class DemandanteServiceRS {
     }
 
     @PUT
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Path("{rfc}")
     public Response modificarDemandante(@PathParam("rfc") String rfc, Demandante demandanteModificado) {
         try {

@@ -50,6 +50,10 @@ public class Sesion implements Serializable {
     public Sesion(Integer idSesion) {
         this.idSesion = idSesion;
     }
+    
+    public Sesion(String rfcUsuario) {
+        this.rfcUsuario = rfcUsuario;
+    }
 
     public Sesion(Integer idSesion, String rfcUsuario, String fechaHora, Character estado) {
         this.idSesion = idSesion;

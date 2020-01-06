@@ -22,21 +22,21 @@ public class OferenteServiceRS {
     private OferenteService oferenteService;
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<Oferente> listarOferentes() {
         return oferenteService.listarOferentes();
     }
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Path("{rfc}")
     public Oferente encontrarOferentePorRfc(@PathParam("rfc") String rfc) {
         return oferenteService.encontrarOferentePorRfc(new Oferente(rfc));
     }
 
     @POST
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Response agregarOferente(Oferente oferente) {
         try {
             oferenteService.registrarOferente(oferente);
@@ -48,8 +48,8 @@ public class OferenteServiceRS {
     }
 
     @PUT
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Path("{rfc}")
     public Response modificarOferente(@PathParam("rfc") String rfc, Oferente oferenteModificado) {
         try {

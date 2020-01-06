@@ -22,21 +22,21 @@ public class PrestamoServiceRS {
     private PrestamoService prestamoService;
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<Prestamo> listarPrestamos() {
         return prestamoService.listarPrestamos();
     }
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Path("{folio}")
     public Prestamo encontrarPrestamoPorRfc(@PathParam("folio") int folio) {
         return prestamoService.encontrarPrestamoPorFolio(new Prestamo(folio));
     }
 
     @POST
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Response agregarPrestamo(Prestamo prestamo) {
         try {
             prestamoService.registrarPrestamo(prestamo);
@@ -48,8 +48,8 @@ public class PrestamoServiceRS {
     }
 
     @PUT
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Path("{folio}")
     public Response modificarPrestamo(@PathParam("folio") int folio, Prestamo prestamoModificado) {
         try {

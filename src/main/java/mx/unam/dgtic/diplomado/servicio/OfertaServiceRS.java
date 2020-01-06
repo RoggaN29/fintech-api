@@ -22,21 +22,21 @@ public class OfertaServiceRS {
     private OfertaService ofertaService;
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public List<Oferta> listarOfertas() {
         return ofertaService.listarOfertas();
     }
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Path("{folio}")
     public Oferta encontrarOfertaPorRfc(@PathParam("folio") int folio) {
         return ofertaService.encontrarOfertaPorFolio(new Oferta(folio));
     }
 
     @POST
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     public Response agregarOferta(Oferta oferta) {
         try {
             ofertaService.registrarOferta(oferta);
@@ -48,8 +48,8 @@ public class OfertaServiceRS {
     }
 
     @PUT
-    @Produces(MediaType.APPLICATION_JSON)
-    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Consumes({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
     @Path("{folio}")
     public Response modificarOferta(@PathParam("folio") int folio, Oferta ofertaModificado) {
         try {
