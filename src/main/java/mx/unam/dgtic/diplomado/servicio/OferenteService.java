@@ -6,7 +6,7 @@ import mx.unam.dgtic.diplomado.domain.Oferente;
 
 @Local
 public interface OferenteService {
-    public List<Oferente> listarOferente();
+    public List<Oferente> listarOferentes();
     
     public Oferente encontrarOferentePorRfc(Oferente oferente);
         

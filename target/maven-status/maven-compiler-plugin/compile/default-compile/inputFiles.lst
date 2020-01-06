@@ -8,6 +8,8 @@ C:\Users\Mario\Documents\NetBeansProjects\EjerciciosJavaEE\fintech-api\src\main\
 C:\Users\Mario\Documents\NetBeansProjects\EjerciciosJavaEE\fintech-api\src\main\java\mx\unam\dgtic\diplomado\domain\Oferta.java
 C:\Users\Mario\Documents\NetBeansProjects\EjerciciosJavaEE\fintech-api\src\main\java\mx\unam\dgtic\diplomado\domain\Oferente.java
 C:\Users\Mario\Documents\NetBeansProjects\EjerciciosJavaEE\fintech-api\src\main\java\mx\unam\dgtic\diplomado\servicio\OferenteService.java
+C:\Users\Mario\Documents\NetBeansProjects\EjerciciosJavaEE\fintech-api\src\main\java\mx\unam\dgtic\diplomado\datos\DemandanteDao.java
+C:\Users\Mario\Documents\NetBeansProjects\EjerciciosJavaEE\fintech-api\src\main\java\mx\unam\dgtic\diplomado\datos\DemandanteDaoImpl.java
 C:\Users\Mario\Documents\NetBeansProjects\EjerciciosJavaEE\fintech-api\src\main\java\mx\unam\dgtic\diplomado\servicio\OferenteServiceImpl.java
 C:\Users\Mario\Documents\NetBeansProjects\EjerciciosJavaEE\fintech-api\src\main\java\mx\unam\dgtic\diplomado\domain\Notificacion.java
 C:\Users\Mario\Documents\NetBeansProjects\EjerciciosJavaEE\fintech-api\src\main\java\mx\unam\dgtic\diplomado\domain\Prestamo.java

@@ -18,7 +18,7 @@ public class OferenteServiceImpl implements OferenteService{
     private SessionContext contexto;
 
     @Override
-    public List<Oferente> listarOferente() {
+    public List<Oferente> listarOferentes() {
         return oferenteDao.findAllOferentes();
     }
 
